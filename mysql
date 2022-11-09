@@ -1,0 +1,59 @@
+mysql query==================
+create database Employee1;
+use Employee1;
+// create table 
+create table Employee1(empId int,empname varchar(20),salary int );
+
+==insert into table ===
+
+insert into Employee1 values(1,'rohit',1000);
+insert into Employee1 values(2,'rahul',12000);
+insert into Employee1 values(3,'aman',14000);
+insert into Employee1 values(4,'saurabh',15000);
+
+insert into Employee1 values(5,'mohan',15000);
+use Employee1;
+=======================================================
+select *from Employee1;
+=========================================================
+update Employee1 set salary=10000 where empId=1;
+
+update Employee1.Employee1 set empname='mehul',salary=20000 where empId=2;
+=========================================================================
+
+==select max salary==
+select salary from Employee1 where salary=(select max(salary) from Employee1);
+==============================================================================
+=== print second largest salary=====
+select *from Employee1 group by salary order by salary desc limit 1,1;
+=======================================================================
+select empname ,salary from Employee1 limit 3;
+========================================================================
+select*from Employee1 order by salary desc;
+=======================================================================
+select * from Employee1 group by salary;
+
+======================================================================
+
+select*from Employee1 order by salary desc;
+
+======================================================================
+delete from  Employee1  empname where empId=5; 
+=========================================================================
+select * from Employee1 group by salary;
+========================================================================
+select  empname, min(salary) as SmallestSalary from Employee1;
+
+select empname, max(salary) as HighestSalary from Employee1;
+=============================================================================
+select count(empname) from Employee1;
+=============================================================================
+select  sum(salary) from employee1;
+=============================================================================
+select avg(salary) from employee1;
+=============================================================================
+select * from Employee1  where empname LIKE '%r';
+=============================================================================
+select *from employee1 where empid in( 1,4);
+=============================================================================
+select *from employee1 where empId between 1 and 3;
