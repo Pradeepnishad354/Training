@@ -1,0 +1,27 @@
+create database join1;
+
+create table Orderr(orderId int ,customerId int,  orderDate date);
+insert into orderr values(11,1,'2022-08-20');
+insert into orderr values(12,2,'2022-08-21');
+insert into orderr values(13,3,'2022-08-21');
+insert into orderr values(14,4,'2022-08-22');
+
+select *from Orderr;
+
+
+create table customers(customerid int ,customername varchar(20),customercontact int(20),customercountry varchar(20));
+
+insert into customers values (1,'rahul',88776655,'india');
+insert into customers values(2,'pritesh',99876655,'southafrica');
+insert into customers values(3,'abhi',9987665,'germany');
+insert into customers values(4,'prinshu',9987455,'southafrica');
+
+select orderr.orderId,customers.customername,orderr.orderDate from orderr 
+Inner Join customers on orderr.customerId =customers.customerid;
+
+select * from customers
+limit 3;
+
+
+select customers.customername,orderr.orderId from customers 
+left Join orderr on customers.customerid=orderr.customerid;
