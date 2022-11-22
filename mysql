@@ -26,6 +26,11 @@ select salary from Employee1 where salary=(select max(salary) from Employee1);
 ==============================================================================
 === print second largest salary=====
 select *from Employee1 group by salary order by salary desc limit 1,1;
+
+select distinct(salary) from employee order by salary desc limit 1,1;
+limit n,m(select nth row - offset, select m rows - limit)
+you can find 8th highest salary by giving limit 7,1(row count starts from 0)
+
 =======================================================================
 select empname ,salary from Employee1 limit 3;
 ========================================================================
