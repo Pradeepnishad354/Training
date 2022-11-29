@@ -25,3 +25,24 @@ limit 3;
 
 select customers.customername,orderr.orderId from customers 
 left Join orderr on customers.customerid=orderr.customerid;
+
+===============================================================
+How to change the table name in MySQL?
+mysql> RENAME old_table TO new_table; 
+================================================================
+
+20) How to change the column name in MySQL?
+ALTER TABLE Student CHANGE COLUMN S_ID Stud_ID varchar(10); 
+
+================================================================
+How to delete columns in MySQL?
+ALTER TABLE table_name DROP COLUMN column_name1, column_name2....;   
+
+=============================================================
+28) How to drop the primary key in MySQL?
+MySQL primary key is a single or combination of the field used to identify each record in a table uniquely. A primary key column cannot be null or empty. We can remove or delete a primary key from the table using the ALTER TABLE statement. The following syntax is used to drop the primary key:
+
+ALTER TABLE table_name  DROP PRIMARY KEY;      
+
+
+
