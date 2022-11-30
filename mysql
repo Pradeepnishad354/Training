@@ -62,3 +62,10 @@ select * from Employee1  where empname LIKE '%r';
 select *from employee1 where empid in( 1,4);
 =============================================================================
 select *from employee1 where empId between 1 and 3;
+
+==================================================================================
+//second highest salary
+1.select max(salary) from employee1 where salary  < (select max(salary) from employee1);
+
+2.select from (select salary from employee order by desc limit 2) as employee order by salary limit 1;
+
